@@ -1,12 +1,13 @@
+// @ts-nocheck
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import "swiper/swiper.less";
-import "swiper/components/navigation/navigation.less";
-import "swiper/components/pagination/pagination.less";
-import "swiper/components/scrollbar/scrollbar.less";
-import "./index.less";
+import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
+import "swiper/components/pagination/pagination.scss";
+import "swiper/components/scrollbar/scrollbar.scss";
+import "./index.scss";
 
 // img list
 import Gangtie from "../../images/gangtie.png";
@@ -98,8 +99,7 @@ const Demo1 = () => {
             <a className="device-list">
               <img className="small" src={item.small} />
               <img className="light" src={item.light} />
-              {/* <span>{item.title}</span>
-              <div>{item.info}</div> */}
+              <p>图片说明{index + 1}</p>
             </a>
           </SwiperSlide>
         );
@@ -115,45 +115,35 @@ const imgList = [
     title: "钢铁",
     small: Gangtie,
     light: GangtieL,
-    url: "/gang",
-    info: "钢铁工业是资源密集型产业，多年来钢铁工业的能耗约占全国能源消费的10%。而炼钢工序能耗是钢铁工业能耗中的一个重要组成部分，高效管控好煤气和电的能源消耗，对指导生产具有重要意义",
   },
   {
     title: "风电",
     small: Fengdian,
     light: FengdianL,
-    url: "/feng",
-    info: "本平台通过网络化的系统部署，通过感知话、物联化、智能风电损失原因与维度众多，",
   },
   {
     title: "PCB制造",
     small: PCB,
     light: PCBL,
-    url: "/chang",
-    info: "风机、空气压缩机等设备被大量应用于SMT制造中，是生产过程中最主要的耗能设备。昂，如何提升故障预警提前量并降低被动停机时长，将能大大提升发电效率。",
   },
   {
     title: "压缩机制造",
     small: Yasuoji,
     light: YasuojiL,
-    info: "本平台通过网络化的系统部署，通过感知话、物联化、智能风电损失原因与维度众多，一旦故障停机，每日由于发电损失所造成的损失达2-4万元（4MW风机），统",
   },
   {
     title: "家具制造",
     small: Jiaju,
     light: JiajuL,
-    info: "本平台通过网络化的系统部署，通过感知话、物联化、智能风电损失原因与维度众多，一旦故障停机，",
   },
   {
     title: "医药",
     small: Yiyao,
     light: YiyaoL,
-    info: "本平台通过网络化的系统部署，通过感知话、物联化、智能风电损失原因与维度众多，一旦故障停机，低被动停机时长，将能大大提升发电效率。",
   },
   {
     title: "广电薄膜",
     small: Guangdian,
     light: GuangdianL,
-    info: "本平台通过网络化的系统部署，通过感知话、物联化、智能风电损失原因与维度众多，一旦故障停机，",
   },
 ];

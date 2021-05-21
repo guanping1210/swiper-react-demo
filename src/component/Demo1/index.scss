@@ -8,7 +8,6 @@
   .swiper-slide {
     display: flex;
     max-width: 330px;
-    background: #192940;
     z-index: 20;
   }
   .swiper-slide-prev,
@@ -17,56 +16,33 @@
     transform: translateX(0px) scale(1) !important;
   }
 
-  .swiper-button-next {
-    position: fixed;
-    right: 8%;
-    background-image: url("../../images/demo-next.png");
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-color: beige;
+    background-image: url("../../images/right_arrow.svg");
     width: 40px;
     height: 40px;
     background-position: center;
-    background-size: cover;
+    background-size: 25px;
+    background-repeat: no-repeat;
     z-index: 999;
-    margin-top: -100px;
 
     &::after {
       content: "";
-    }
-
-    &:hover {
-      background-image: url("../../images/demo-next-hover.png");
     }
   }
 
   .swiper-button-prev {
-    position: fixed;
-    left: 8%;
-    background-image: url("../../images/demo-prev.png");
-    width: 40px;
-    height: 40px;
-    background-position: center;
-    background-size: cover;
-    z-index: 999;
-    margin-top: -100px;
-
-    &::after {
-      content: "";
-    }
-
-    &:hover {
-      background-image: url("../../images/demo-prev-hover.png");
-    }
+    background-image: url("../../images/left_arrow.svg");
+    background-size: 30px;
   }
 
   .device-list {
     position: relative;
     display: flex;
     flex-direction: column;
-    border-radius: 13px;
-    border: 1px solid;
-    border-image: linear-gradient(48deg, rgba(#5b8ce3), rgba(#6349d5)) 1 1;
     opacity: 1;
-    border-top-left-radius: 13px;
-    border-top-right-radius: 13px;
+    background: #ccc;
 
     .small {
       display: block;
@@ -74,7 +50,6 @@
 
     &:hover {
       opacity: 1;
-      border-width: 2px;
 
       .light {
         display: block;
@@ -87,11 +62,7 @@
 
     img {
       width: 100%;
-      height: auto;
-      margin-bottom: 30px;
-      border: dashed 1px rgba(#fff, 0.8);
-      border-top-left-radius: 13px;
-      border-top-right-radius: 13px;
+      height: 100%;
       display: none;
     }
 
@@ -110,18 +81,17 @@
       font-weight: 400;
       color: #91afc4;
       padding: 0 30px;
-      padding-bottom: 30px;
+    }
 
-      border-bottom-left-radius: 13px;
-      border-bottom-right-radius: 13px;
+    p {
+      position: absolute;
+      color: #fff;
     }
   }
 
   .pre-cover {
-    // background: red;
     width: 70% !important;
     height: 70%;
-    // opacity: 0.4;
     transform: scale(0.8);
 
     &:after {
