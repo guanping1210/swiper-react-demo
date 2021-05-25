@@ -3,7 +3,7 @@
 swiper@6.5.2
 
 结合 react 和 swiper，做的一个异形 slide demo， 如下图
-![这是图片](../swiper-react-demo/static/img1.png)
+![这是图片](./static/img1.png)
 
 然后需求就是：
 轮播图，面儿上默认展示 3 张图，然后左右各有两张小图在背后，
